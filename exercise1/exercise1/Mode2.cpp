@@ -20,6 +20,7 @@ void Mode2::chMode(EmbeddedSystemX* context)
 void Mode2::enter_state(EmbeddedSystemX* context)
 {
 	std::cout << "Mode2 entered." << std::endl;
+	respondM2event();
 }
 
 void Mode2::respondM2event()

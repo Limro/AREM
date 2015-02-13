@@ -20,6 +20,7 @@ void Mode3::chMode(EmbeddedSystemX* context)
 void Mode3::enter_state(EmbeddedSystemX* context)
 {
 	std::cout << "Mode3 entered." << std::endl;
+	respondM3event();
 }
 
 void Mode3::respondM3event()

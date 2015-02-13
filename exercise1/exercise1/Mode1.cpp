@@ -19,6 +19,7 @@ void Mode1::respondM1event()
 void Mode1::enter_state(EmbeddedSystemX* context)
 {
 	std::cout << "Mode1 entered." << std::endl;
+	respondM1event();
 }
 
 void Mode1::chMode(EmbeddedSystemX* context)
