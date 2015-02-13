@@ -92,10 +92,16 @@
     <ClCompile Include="Suspended.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="chMode.h" />
+    <ClInclude Include="Command.hpp" />
     <ClInclude Include="Configuration.hpp" />
+    <ClInclude Include="ConfigurationEnded.hpp" />
+    <ClInclude Include="Configure.hpp" />
     <ClInclude Include="EmbeddedSystemX.hpp" />
     <ClInclude Include="EmbeddedSystemXState.hpp" />
+    <ClInclude Include="Exit.h" />
     <ClInclude Include="Failure.hpp" />
+    <ClInclude Include="Initalized.hpp" />
     <ClInclude Include="Initializing.hpp" />
     <ClInclude Include="Mode1.hpp" />
     <ClInclude Include="Mode2.hpp" />
@@ -104,6 +110,13 @@
     <ClInclude Include="PowerOnSelfTest.hpp" />
     <ClInclude Include="Ready.hpp" />
     <ClInclude Include="RealTimeLoop.hpp" />
+    <ClInclude Include="Restart.hpp" />
+    <ClInclude Include="Resume.hpp" />
+    <ClInclude Include="SelfTestFailed.hpp" />
+    <ClInclude Include="SelfTestOK.hpp" />
+    <ClInclude Include="Start.hpp" />
+    <ClInclude Include="Stop.hpp" />
+    <ClInclude Include="Suspend.hpp" />
     <ClInclude Include="Suspended.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

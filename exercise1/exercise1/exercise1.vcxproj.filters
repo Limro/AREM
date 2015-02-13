@@ -16,6 +16,9 @@
     <Filter Include="states">
       <UniqueIdentifier>{5eff8fae-21e8-4021-900e-00340836d349}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Command">
+      <UniqueIdentifier>{0afe6a67-19c6-412e-8bfb-a82192f87dd3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="exercise1.cpp">
@@ -100,6 +103,45 @@
     </ClInclude>
     <ClInclude Include="Suspended.hpp">
       <Filter>states</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Initalized.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Restart.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfTestOK.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Configure.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigurationEnded.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Exit.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Stop.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Start.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Suspend.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Resume.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfTestFailed.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="chMode.h">
+      <Filter>Command</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
