@@ -24,14 +24,14 @@ int main(int argc, const char* argv)
 	Stop stopcmd;
 	Exit exitcmd;
 
-	system.Restart();
-	system.Configure();
-	system.StartRun();
-	system.chMode();
-	system.Suspend();
-	system.Resume();
-	system.chMode();
-	system.chMode();
-	system.Stop();
-	system.Exit();
+	system.HandleEvent(&restartcmd);
+	system.HandleEvent(&confcmd);
+	system.HandleEvent(&startcmd);
+	system.HandleEvent(&chmodecmd);
+	system.HandleEvent(&suspendcmd);
+	system.HandleEvent(&resumecmd);
+	system.HandleEvent(&chmodecmd);
+	system.HandleEvent(&chmodecmd);
+	system.HandleEvent(&stopcmd);
+	system.HandleEvent(&exitcmd);
 }
