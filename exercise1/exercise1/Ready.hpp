@@ -14,7 +14,6 @@ public:
 
 	void enter_state(EmbeddedSystemX*) override;
 
-	void Restart(EmbeddedSystemX*) override;
 	void StartRun(EmbeddedSystemX*) override;
 	void Configure(EmbeddedSystemX*) override;	
 

@@ -27,8 +27,3 @@ void Suspended::Resume(EmbeddedSystemX* context)
 {
 	change_state(context, &Mode1::getInstance());
 }
-
-void Suspended::Restart(EmbeddedSystemX* context)
-{
-	change_state(context, &PowerOnSelfTest::getInstance());
-}

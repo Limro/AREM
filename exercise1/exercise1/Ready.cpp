@@ -26,8 +26,3 @@ void Ready::Configure(EmbeddedSystemX* context)
 {
 	change_state(context, &Configuration::getInstance());
 }
-
-void Ready::Restart(EmbeddedSystemX* context)
-{
-	change_state(context, &PowerOnSelfTest::getInstance());
-}
