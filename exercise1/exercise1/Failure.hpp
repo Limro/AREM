@@ -11,7 +11,13 @@ public:
 		// Instantiated on first use.
 		return instance;
 	}
+
+	void enter_state(EmbeddedSystemX*) override;
+
+	void Restart(EmbeddedSystemX*) override;
 private:
+	void display(uint32_t errorNo);
+
 	Failure();
 	~Failure() override;
 	Failure(Failure const&) = delete;

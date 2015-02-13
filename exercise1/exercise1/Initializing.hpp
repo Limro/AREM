@@ -11,6 +11,10 @@ public:
 		// Instantiated on first use.
 		return instance;
 	}
+
+	void enter_state(EmbeddedSystemX*) override;
+	void Initialized(EmbeddedSystemX*) override;
+
 private:
 	Initializing();
 	~Initializing() override;

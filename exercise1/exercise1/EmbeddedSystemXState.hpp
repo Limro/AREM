@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <cstdint>
 
 class EmbeddedSystemX;
 
@@ -8,7 +9,7 @@ class EmbeddedSystemXState
 {
 public:
 	virtual void Restart(EmbeddedSystemX*);
-	virtual void SelfTestFailed(EmbeddedSystemX*);
+	virtual void SelfTestFailed(EmbeddedSystemX*, uint32_t errorNo);
 	virtual void SelfTestOk(EmbeddedSystemX*);
 	virtual void Exit(EmbeddedSystemX*);
 	virtual void Initialized(EmbeddedSystemX*);

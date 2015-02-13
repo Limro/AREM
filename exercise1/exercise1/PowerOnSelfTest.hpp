@@ -3,6 +3,8 @@
 #include "EmbeddedSystemXState.hpp"
 #include "EmbeddedSystemX.hpp"
 
+#include <cstdint>
+
 class PowerOnSelfTest : public EmbeddedSystemXState
 {
 public:
@@ -15,9 +17,11 @@ public:
 
 	void enter_state(EmbeddedSystemX*) override; //systemSelfTest
 	void SelfTestOk(EmbeddedSystemX*) override;
-	void SelfTestFailed(EmbeddedSystemX*) override;
+	void SelfTestFailed(EmbeddedSystemX* context, uint32_t errorNo) override;
 	
 private:
+	void perform_selftest(EmbeddedSystemX* context);
+
 	PowerOnSelfTest();
 	~PowerOnSelfTest() override;
 	PowerOnSelfTest(PowerOnSelfTest const&) = delete;
