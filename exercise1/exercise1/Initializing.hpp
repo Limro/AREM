@@ -16,6 +16,8 @@ public:
 	void Initialized(EmbeddedSystemX*) override;
 
 private:
+	void startInitializing(EmbeddedSystemX*);
+
 	Initializing();
 	~Initializing() override;
 	Initializing(Initializing const&) = delete;

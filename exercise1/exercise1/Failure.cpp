@@ -15,6 +15,7 @@ Failure::~Failure()
 
 void Failure::enter_state(EmbeddedSystemX* context)
 {
+	std::cout << "Failure entered." << std::endl;
 	display(context->get_last_errorNo());
 }
 
