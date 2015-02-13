@@ -15,7 +15,7 @@ Suspended::~Suspended()
 
 void Suspended::enter_state(EmbeddedSystemX* context)
 {
-	std::cout << "Configuration entered." << std::endl;
+	std::cout << "Suspended entered." << std::endl;
 }
 
 void Suspended::Stop(EmbeddedSystemX* context)
