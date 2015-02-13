@@ -6,7 +6,7 @@ void EmbeddedSystemXState::Restart(EmbeddedSystemX*)
 	default();
 }
 
-void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX*)
+void EmbeddedSystemXState::SelfTestFailed(EmbeddedSystemX*, uint32_t errorNo)
 {
 	default();
 }
