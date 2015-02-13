@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
+    <ClCompile Include="EmbeddedSystemXState.cpp" />
     <ClCompile Include="exercise1.cpp" />
     <ClCompile Include="Failure.cpp" />
     <ClCompile Include="Initializing.cpp" />

@@ -1,31 +1,32 @@
 #pragma once
 
-#include "EmbeddedSystemX.hpp"
 #include <iostream>
+
+class EmbeddedSystemX;
 
 class EmbeddedSystemXState
 {
 public:
-	virtual void Restart(EmbeddedSystemX*){ default(); }
-	virtual void SelfTestFailed(EmbeddedSystemX*){ default(); }
-	virtual void SelfTestOk(EmbeddedSystemX*){ default(); }
-	virtual void Exit(EmbeddedSystemX*){ default(); }
-	virtual void Initialized(EmbeddedSystemX*){ default(); }
-	virtual void Configure(EmbeddedSystemX*){ default(); }
-	virtual void ConfigurationEnded(EmbeddedSystemX*){ default(); }
-	virtual void StartRun(EmbeddedSystemX*){ default(); }
-	virtual void Stop(EmbeddedSystemX*){ default(); }
-	virtual void Suspend(EmbeddedSystemX*){ default(); }
-	virtual void Resume(EmbeddedSystemX*){ default(); }
-	virtual void chMode(EmbeddedSystemX*){ default(); }
+	virtual void Restart(EmbeddedSystemX*);
+	virtual void SelfTestFailed(EmbeddedSystemX*);
+	virtual void SelfTestOk(EmbeddedSystemX*);
+	virtual void Exit(EmbeddedSystemX*);
+	virtual void Initialized(EmbeddedSystemX*);
+	virtual void Configure(EmbeddedSystemX*);
+	virtual void ConfigurationEnded(EmbeddedSystemX*);
+	virtual void StartRun(EmbeddedSystemX*);
+	virtual void Stop(EmbeddedSystemX*);
+	virtual void Suspend(EmbeddedSystemX*);
+	virtual void Resume(EmbeddedSystemX*);
+	virtual void chMode(EmbeddedSystemX*);
 
-	virtual void enter_state(EmbeddedSystemX*){ std::cout << "State entered." << std::endl; }
-	virtual ~EmbeddedSystemXState(){}
+	virtual void enter_state(EmbeddedSystemX*);
+	virtual ~EmbeddedSystemXState();
+
+protected:
+	void change_state(EmbeddedSystemX*, EmbeddedSystemXState*);
 
 private:
-	void default()
-	{
-		std::cout << "Warning: Default event implementation used!" << std::endl;
-	}
+	void default();
 };
 
