@@ -4,23 +4,15 @@
 
 #include <cstdint>
 #include <string>
+#include "Command.hpp"
 
 class EmbeddedSystemX
 {
 public:
 	EmbeddedSystemX(const std::string& name);
-	virtual void Restart(){ _state->Restart(this); }
-	virtual void SelfTestFailed(std::uint32_t errorNo){ _state->SelfTestFailed(this, errorNo); }
-	virtual void SelfTestOk(){ _state->SelfTestOk(this); }
-	virtual void Exit(){ _state->Exit(this); }
-	virtual void Initialized(){ _state->Initialized(this); }
-	virtual void Configure(){ _state->Configure(this); }
-	virtual void ConfigurationEnded(){ _state->ConfigurationEnded(this); }
-	virtual void StartRun(){ _state->StartRun(this); }
-	virtual void Stop(){ _state->Stop(this); }
-	virtual void Suspend(){ _state->Suspend(this); }
-	virtual void Resume(){ _state->Resume(this); }
-	virtual void chMode(){ _state->chMode(this); }
+	
+	void HandleEvent(Command* eventCommand);
+
 	~EmbeddedSystemX();
 
 	int get_VersionNo(){ return VersionNo; }

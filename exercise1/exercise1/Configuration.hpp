@@ -11,7 +11,14 @@ public:
 		// Instantiated on first use.
 		return instance;
 	}
+	void enter_state(EmbeddedSystemX*) override;
+
+	void ConfigurationEnded(EmbeddedSystemX*) override;
+	void Restart(EmbeddedSystemX*) override;
 private:
+	void readConfigurationInfo(EmbeddedSystemX*);
+	void PerformConfigurationX(EmbeddedSystemX*);
+
 	Configuration();
 	~Configuration() override;
 	Configuration(Configuration const&) = delete;
