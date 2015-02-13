@@ -1,9 +1,10 @@
 #pragma once
+#include "EmbeddedSystemXState.hpp"
 #include "EmbeddedSystemX.hpp"
 #include "Command.hpp"
 
-class chMode : Command
+class chMode : public Command
 {
 public:
-	void excecute(EmbeddedSystemX* context) { context->chMode(); }
+	void excecute(EmbeddedSystemX* context, EmbeddedSystemXState* state) { state->chMode(context); }
 };

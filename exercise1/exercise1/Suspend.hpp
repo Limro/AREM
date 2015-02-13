@@ -1,9 +1,10 @@
 #pragma once
+#include "EmbeddedSystemXState.hpp"
 #include "EmbeddedSystemX.hpp"
 #include "Command.hpp"
 
-class Suspend : Command
+class Suspend : public Command
 {
 public:
-	void excecute(EmbeddedSystemX* context) { context->Suspend(); }
+	void excecute(EmbeddedSystemX* context, EmbeddedSystemXState* state) { state->Suspend(context); }
 };

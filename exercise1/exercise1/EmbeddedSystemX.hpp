@@ -20,7 +20,7 @@ public:
 	bool get_is_first_run(){ return is_first_run; }
 	void set_is_first_run(bool is_first_run){ this->is_first_run = is_first_run; }
 
-	bool get_last_errorNo(){ return last_errorNo; }
+	uint32_t get_last_errorNo(){ return last_errorNo; }
 	void set_last_errorNo(uint32_t last_errorNo){ this->last_errorNo = last_errorNo; }
 
 private:

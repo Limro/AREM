@@ -20,5 +20,5 @@ void EmbeddedSystemX::change_state(EmbeddedSystemXState* new_state)
 
 void EmbeddedSystemX::HandleEvent(Command* eventCommand)
 {
-	eventCommand->excecute(this);
+	eventCommand->excecute(this, _state);
 }

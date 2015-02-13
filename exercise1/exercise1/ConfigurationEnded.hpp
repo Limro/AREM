@@ -1,9 +1,10 @@
 #pragma once
+#include "EmbeddedSystemXState.hpp"
 #include "EmbeddedSystemX.hpp"
 #include "Command.hpp"
 
-class ConfigurationEnded : Command
+class ConfigurationEnded : public Command
 {
 public:
-	void excecute(EmbeddedSystemX* context) { context->ConfigurationEnded(); }
+	void excecute(EmbeddedSystemX* context, EmbeddedSystemXState* state) { state->ConfigurationEnded(context); }
 };

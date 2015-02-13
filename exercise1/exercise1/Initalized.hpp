@@ -1,9 +1,10 @@
 #pragma once
+#include "EmbeddedSystemXState.hpp"
 #include "EmbeddedSystemX.hpp"
 #include "Command.hpp"
 
-class Initalized : Command
+class Initalized : public Command
 {
 public:
-	void excecute(EmbeddedSystemX* context) { context->Initialized(); }
+	void excecute(EmbeddedSystemX* context, EmbeddedSystemXState* state) { state->Initialized(context); }
 };
