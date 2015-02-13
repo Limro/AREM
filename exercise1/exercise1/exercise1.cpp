@@ -14,7 +14,4 @@ int main(int argc, const char* argv)
 	system.Resume();
 	system.chMode();
 	system.chMode();
-
-
-	std::cout << "w00t" << std::endl;
 }
