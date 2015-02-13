@@ -11,6 +11,12 @@ public:
 		// Instantiated on first use.
 		return instance;
 	}
+
+	void enter_state(EmbeddedSystemX*) override;
+
+	void Stop(EmbeddedSystemX*) override;
+	void Resume(EmbeddedSystemX*) override;
+	void Restart(EmbeddedSystemX*) override;
 private:
 	Suspended();
 	~Suspended() override;

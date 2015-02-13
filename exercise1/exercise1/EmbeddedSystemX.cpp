@@ -4,7 +4,7 @@
 EmbeddedSystemX::EmbeddedSystemX(const std::string& name)
 	:Name(name), VersionNo(1), is_first_run(true), last_errorNo(0)
 {
-	_state = &PowerOnSelfTest::getInstance();
+	change_state(&PowerOnSelfTest::getInstance());
 }
 
 

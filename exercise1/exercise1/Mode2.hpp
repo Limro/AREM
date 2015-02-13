@@ -11,7 +11,13 @@ public:
 		// Instantiated on first use.
 		return instance;
 	}
+
+	void enter_state(EmbeddedSystemX*) override;
+
+	void chMode(EmbeddedSystemX*) override;
 private:
+	void respondM2event();
+
 	Mode2();
 	~Mode2() override;
 	Mode2(Mode2 const&) = delete;

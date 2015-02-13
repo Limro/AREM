@@ -15,17 +15,16 @@ PowerOnSelfTest::~PowerOnSelfTest()
 
 void PowerOnSelfTest::enter_state(EmbeddedSystemX* context)
 {
+	std::cout << "PowerOnSelfTest entered." << std::endl;
 	perform_selftest(context);
 }
 
 void PowerOnSelfTest::perform_selftest(EmbeddedSystemX* context)
 {
-	std::cout << "PowerOnSelfTest entered - performing selftest." << std::endl;
-
 	if (context->get_is_first_run())
-		context->SelfTestFailed(0xdeadbeef);
+		SelfTestFailed(context, 0xdeadbeef);
 	else
-		context->SelfTestOk();
+		SelfTestOk(context);
 
 	context->set_is_first_run(false);
 }
