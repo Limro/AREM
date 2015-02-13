@@ -17,3 +17,8 @@ void EmbeddedSystemX::change_state(EmbeddedSystemXState* new_state)
 	_state = new_state;
 	_state->enter_state(this);
 }
+
+void EmbeddedSystemX::HandleEvent(Command* eventCommand)
+{
+	eventCommand->excecute(this);
+}
