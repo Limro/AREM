@@ -14,7 +14,6 @@ public:
 	void enter_state(EmbeddedSystemX*) override;
 
 	void ConfigurationEnded(EmbeddedSystemX*) override;
-	void Restart(EmbeddedSystemX*) override;
 private:
 	void readConfigurationInfo(EmbeddedSystemX*);
 	void PerformConfigurationX(EmbeddedSystemX*);

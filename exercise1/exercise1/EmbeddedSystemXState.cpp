@@ -61,11 +61,6 @@ void EmbeddedSystemXState::chMode(EmbeddedSystemX*)
 	default();
 }
 
-void EmbeddedSystemXState::enter_state(EmbeddedSystemX*)
-{ 
-	std::cout << "State entered." << std::endl; 
-}
-
 void EmbeddedSystemXState::change_state(EmbeddedSystemX* context, EmbeddedSystemXState* new_state)
 {
 	context->change_state(new_state);

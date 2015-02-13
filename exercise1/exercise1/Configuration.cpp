@@ -24,11 +24,6 @@ void Configuration::ConfigurationEnded(EmbeddedSystemX* context)
 	change_state(context, &Ready::getInstance());
 }
 
-void Configuration::Restart(EmbeddedSystemX* context)
-{
-	change_state(context, &PowerOnSelfTest::getInstance());
-}
-
 void Configuration::readConfigurationInfo(EmbeddedSystemX* context)
 {
 	PerformConfigurationX(context);

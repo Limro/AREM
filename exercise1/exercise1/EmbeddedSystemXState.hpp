@@ -21,7 +21,7 @@ public:
 	virtual void Resume(EmbeddedSystemX*);
 	virtual void chMode(EmbeddedSystemX*);
 
-	virtual void enter_state(EmbeddedSystemX*);
+	virtual void enter_state(EmbeddedSystemX*) = 0; //abstract
 	virtual ~EmbeddedSystemXState();
 
 protected:
