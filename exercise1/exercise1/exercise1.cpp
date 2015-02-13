@@ -14,4 +14,6 @@ int main(int argc, const char* argv)
 	system.Resume();
 	system.chMode();
 	system.chMode();
+	system.Stop();
+	system.Exit();
 }
