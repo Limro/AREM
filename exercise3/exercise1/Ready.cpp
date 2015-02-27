@@ -1,6 +1,6 @@
 #include "Ready.hpp"
 #include "EmbeddedSystemX.hpp"
-#include "Mode1.hpp"
+#include "RealTimeLoop.hpp"
 #include "Configuration.hpp"
 #include "PowerOnSelfTest.hpp"
 #include "UI.hpp"
@@ -20,7 +20,7 @@ void Ready::enter_state(EmbeddedSystemX* context)
 
 void Ready::StartRun(EmbeddedSystemX* context)
 {
-	change_state(context, &Mode1::getInstance());
+	change_state(context, &RealTimeLoop::getInstance());
 }
 
 void Ready::Configure(EmbeddedSystemX* context)

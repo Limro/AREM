@@ -1,6 +1,6 @@
 #include "Suspended.hpp"
 #include "EmbeddedSystemX.hpp"
-#include "Mode1.hpp"
+#include "RealTimeLoop.hpp"
 #include "Ready.hpp"
 #include "PowerOnSelfTest.hpp"
 #include "UI.hpp"
@@ -26,5 +26,5 @@ void Suspended::Stop(EmbeddedSystemX* context)
 
 void Suspended::Resume(EmbeddedSystemX* context)
 {
-	change_state(context, &Mode1::getInstance());
+	change_state(context, &RealTimeLoop::getInstance());
 }

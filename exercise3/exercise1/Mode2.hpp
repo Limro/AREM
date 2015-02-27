@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RealTimeLoop.hpp"
+#include "ApplicationModeSetting.hpp"
 
-class Mode2 : public RealTimeLoop
+class Mode2 : public ApplicationModeSetting
 {
 public:
 	static Mode2& getInstance()
@@ -19,7 +19,7 @@ private:
 	void respondM2event();
 
 	Mode2();
-	~Mode2() override;
+	~Mode2();
 	Mode2(Mode2 const&) = delete;
 	void operator=(Mode2 const&) = delete;
 };

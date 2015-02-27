@@ -1,13 +1,15 @@
 #include "RealTimeLoop.hpp"
 #include "EmbeddedSystemX.hpp"
+#include "ApplicationModeSetting.hpp"
 #include "Ready.hpp"
 #include "Suspended.hpp"
-
+#include "UI.hpp"
+#include "Mode1.hpp"
+#include "RealTimeExecution.hpp"
 
 RealTimeLoop::RealTimeLoop()
 {
 }
-
 
 RealTimeLoop::~RealTimeLoop()
 {
@@ -23,3 +25,24 @@ void RealTimeLoop::Suspend(EmbeddedSystemX* context)
 	change_state(context, &Suspended::getInstance());
 }
 
+void RealTimeLoop::chMode(EmbeddedSystemX* context)
+{
+	get_appmode_state(context)->chMode(context);
+}
+
+void RealTimeLoop::RunRealTime(EmbeddedSystemX* context)
+{
+	get_sim_state(context)->RunRealTime(context);
+}
+
+void RealTimeLoop::Simulate(EmbeddedSystemX* context)
+{
+	get_sim_state(context)->Simulate(context);
+}
+
+void RealTimeLoop::enter_state(EmbeddedSystemX* context)
+{
+	UI::out() << "RealTimeLoop entered." << std::endl;
+	change_appmode_state(context, &Mode1::getInstance());
+	change_sim_state(context, &RealTimeExecution::getInstance());
+}

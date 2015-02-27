@@ -15,8 +15,3 @@ void SimulateRealTimeState::default_event_impl()
 {
 	UI::out() << "Warning: Current state does not handle this event!" << std::endl;
 }
-
-void SimulateRealTimeState::change_state(EmbeddedSystemX* context, SimulateRealTimeState* new_state)
-{
-	context->change_sim_state(new_state);
-}

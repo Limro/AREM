@@ -13,14 +13,13 @@ Mode3::~Mode3()
 
 void Mode3::chMode(EmbeddedSystemX* context)
 {
-	UI::out() << "respondM3event stopped." << std::endl;
-	change_state(context, &Mode1::getInstance());
+	change_appmode_state(context, &Mode1::getInstance());
 }
 
 void Mode3::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Mode3 entered." << std::endl;
-	respondM3event();
+	//respondM3event();
 }
 
 void Mode3::respondM3event()

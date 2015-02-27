@@ -2,9 +2,9 @@
 
 #include <cstdint>
 
-class EmbeddedSystemX;
+#include "EmbeddedSystemXStateBase.hpp"
 
-class EmbeddedSystemXState
+class EmbeddedSystemXState : public EmbeddedSystemXStateBase
 {
 public:
 	virtual void Restart(EmbeddedSystemX*);
@@ -19,14 +19,10 @@ public:
 	virtual void Suspend(EmbeddedSystemX*);
 	virtual void Resume(EmbeddedSystemX*);
 	virtual void chMode(EmbeddedSystemX*);
-
-	virtual void enter_state(EmbeddedSystemX*) = 0; //abstract
-	virtual ~EmbeddedSystemXState();
-
-protected:
-	void change_state(EmbeddedSystemX*, EmbeddedSystemXState*);
-
+	virtual void RunRealTime(EmbeddedSystemX*);
+	virtual void Simulate(EmbeddedSystemX*);
+	
 private:
-	void default();
+	void default_event_impl();
 };
 

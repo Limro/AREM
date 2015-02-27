@@ -76,7 +76,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationModeSetting.cpp" />
     <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="EmbeddedSystemXStateBase.cpp" />
+    <ClCompile Include="RealTimeExecution.cpp" />
+    <ClCompile Include="Simulate.hpp" />
+    <ClCompile Include="SimulateRealTimeState.cpp" />
+    <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
     <ClCompile Include="EmbeddedSystemXState.cpp" />
@@ -93,11 +99,17 @@
     <ClCompile Include="Suspended.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ApplicationModeSetting.hpp" />
     <ClInclude Include="chMode.h" />
     <ClInclude Include="Command.hpp" />
     <ClInclude Include="Configuration.hpp" />
     <ClInclude Include="ConfigurationEnded.hpp" />
     <ClInclude Include="Configure.hpp" />
+    <ClInclude Include="EmbeddedSystemXStateBase.hpp" />
+    <ClInclude Include="RealTimeExecution.hpp" />
+    <ClInclude Include="RunRealTime.hpp" />
+    <ClInclude Include="SimulateRealTimeState.hpp" />
+    <ClInclude Include="Simulation.hpp" />
     <ClInclude Include="UI.hpp" />
     <ClInclude Include="EmbeddedSystemX.hpp" />
     <ClInclude Include="EmbeddedSystemXState.hpp" />

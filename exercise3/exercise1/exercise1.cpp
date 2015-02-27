@@ -8,6 +8,8 @@
 #include "Resume.hpp"
 #include "Stop.hpp"
 #include "Exit.h"
+#include "Simulate.hpp"
+#include "RunRealTime.hpp"
 
 int main(int argc, const char* argv)
 {
@@ -21,6 +23,9 @@ int main(int argc, const char* argv)
 	Resume resumecmd;
 	Stop stopcmd;
 	Exit exitcmd;
+	RunRealTime realtimecmd;
+	Simulate simulatecmd;
+
 
 	system.HandleEvent(&restartcmd);
 	system.HandleEvent(&confcmd);
@@ -30,6 +35,8 @@ int main(int argc, const char* argv)
 	system.HandleEvent(&resumecmd);
 	system.HandleEvent(&chmodecmd);
 	system.HandleEvent(&chmodecmd);
+	system.HandleEvent(&simulatecmd);
+	system.HandleEvent(&realtimecmd);
 	system.HandleEvent(&stopcmd);
 	system.HandleEvent(&exitcmd);
 }

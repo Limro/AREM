@@ -62,15 +62,17 @@ void EmbeddedSystemXState::chMode(EmbeddedSystemX*)
 	default_event_impl();
 }
 
-void EmbeddedSystemXState::change_state(EmbeddedSystemX* context, EmbeddedSystemXState* new_state)
+void EmbeddedSystemXState::RunRealTime(EmbeddedSystemX*)
 {
-	context->change_state(new_state);
+	default_event_impl();
+}
+
+void EmbeddedSystemXState::Simulate(EmbeddedSystemX*)
+{
+	default_event_impl();
 }
 
 void EmbeddedSystemXState::default_event_impl()
 {
 	UI::out() << "Warning: Current state does not handle this event!" << std::endl;
 }
-
-EmbeddedSystemXState::~EmbeddedSystemXState()
-{/* Empty destructor */}

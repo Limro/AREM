@@ -19,11 +19,10 @@ void Mode1::respondM1event()
 void Mode1::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Mode1 entered." << std::endl;
-	respondM1event();
+	//respondM1event();
 }
 
 void Mode1::chMode(EmbeddedSystemX* context)
 {
-	UI::out() << "respondM1event stopped." << std::endl;
-	change_state(context, &Mode2::getInstance());
+	change_appmode_state(context, &Mode2::getInstance());
 }
