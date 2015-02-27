@@ -3,6 +3,8 @@
 #include <mutex>
 #include "Thread.hpp"
 
+class Guard;
+
 class Mutex
 {
 public:
@@ -10,6 +12,8 @@ public:
 	void unlock();
 
 private:
+	friend class Guard;
+
 	std::mutex mutex;
 	bool isOwner = false;
 	Thread::ThreadPriority old_priority;

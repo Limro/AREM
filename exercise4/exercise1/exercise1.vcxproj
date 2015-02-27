@@ -77,12 +77,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ApplicationModeSetting.cpp" />
+    <ClCompile Include="Conditional.cpp" />
     <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="ContinuousThread.cpp" />
+    <ClCompile Include="DiscreteThread.cpp" />
     <ClCompile Include="EmbeddedSystemXStateBase.cpp" />
+    <ClCompile Include="Guard.cpp" />
+    <ClCompile Include="Mutex.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="RealTimeExecution.cpp" />
     <ClCompile Include="Simulate.hpp" />
     <ClCompile Include="SimulateRealTimeState.cpp" />
     <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Thread.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="EmbeddedSystemX.cpp" />
     <ClCompile Include="EmbeddedSystemXState.cpp" />
@@ -102,14 +109,21 @@
     <ClInclude Include="ApplicationModeSetting.hpp" />
     <ClInclude Include="chMode.h" />
     <ClInclude Include="Command.hpp" />
+    <ClInclude Include="Conditional.hpp" />
     <ClInclude Include="Configuration.hpp" />
     <ClInclude Include="ConfigurationEnded.hpp" />
     <ClInclude Include="Configure.hpp" />
+    <ClInclude Include="ContinuousThread.hpp" />
+    <ClInclude Include="DiscreteThread.hpp" />
     <ClInclude Include="EmbeddedSystemXStateBase.hpp" />
+    <ClInclude Include="Guard.hpp" />
+    <ClInclude Include="Mutex.hpp" />
+    <ClInclude Include="Queue.hpp" />
     <ClInclude Include="RealTimeExecution.hpp" />
     <ClInclude Include="RunRealTime.hpp" />
     <ClInclude Include="SimulateRealTimeState.hpp" />
     <ClInclude Include="Simulation.hpp" />
+    <ClInclude Include="Thread.hpp" />
     <ClInclude Include="UI.hpp" />
     <ClInclude Include="EmbeddedSystemX.hpp" />
     <ClInclude Include="EmbeddedSystemXState.hpp" />
