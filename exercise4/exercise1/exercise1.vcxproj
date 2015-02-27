@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{368A1A64-A7E8-4F3B-8D89-082356B7212D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>exercise1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ApplicationModeSetting.cpp" />
+    <ClCompile Include="Configuration.cpp" />
+    <ClCompile Include="EmbeddedSystemXStateBase.cpp" />
+    <ClCompile Include="RealTimeExecution.cpp" />
+    <ClCompile Include="Simulate.hpp" />
+    <ClCompile Include="SimulateRealTimeState.cpp" />
+    <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="EmbeddedSystemX.cpp" />
+    <ClCompile Include="EmbeddedSystemXState.cpp" />
+    <ClCompile Include="exercise1.cpp" />
+    <ClCompile Include="Failure.cpp" />
+    <ClCompile Include="Initializing.cpp" />
+    <ClCompile Include="Mode1.cpp" />
+    <ClCompile Include="Mode2.cpp" />
+    <ClCompile Include="Mode3.cpp" />
+    <ClCompile Include="Operational.cpp" />
+    <ClCompile Include="PowerOnSelfTest.cpp" />
+    <ClCompile Include="Ready.cpp" />
+    <ClCompile Include="RealTimeLoop.cpp" />
+    <ClCompile Include="Suspended.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApplicationModeSetting.hpp" />
+    <ClInclude Include="chMode.h" />
+    <ClInclude Include="Command.hpp" />
+    <ClInclude Include="Configuration.hpp" />
+    <ClInclude Include="ConfigurationEnded.hpp" />
+    <ClInclude Include="Configure.hpp" />
+    <ClInclude Include="EmbeddedSystemXStateBase.hpp" />
+    <ClInclude Include="RealTimeExecution.hpp" />
+    <ClInclude Include="RunRealTime.hpp" />
+    <ClInclude Include="SimulateRealTimeState.hpp" />
+    <ClInclude Include="Simulation.hpp" />
+    <ClInclude Include="UI.hpp" />
+    <ClInclude Include="EmbeddedSystemX.hpp" />
+    <ClInclude Include="EmbeddedSystemXState.hpp" />
+    <ClInclude Include="Exit.h" />
+    <ClInclude Include="Failure.hpp" />
+    <ClInclude Include="Initalized.hpp" />
+    <ClInclude Include="Initializing.hpp" />
+    <ClInclude Include="Mode1.hpp" />
+    <ClInclude Include="Mode2.hpp" />
+    <ClInclude Include="Mode3.hpp" />
+    <ClInclude Include="Operational.hpp" />
+    <ClInclude Include="PowerOnSelfTest.hpp" />
+    <ClInclude Include="Ready.hpp" />
+    <ClInclude Include="RealTimeLoop.hpp" />
+    <ClInclude Include="Restart.hpp" />
+    <ClInclude Include="Resume.hpp" />
+    <ClInclude Include="SelfTestFailed.hpp" />
+    <ClInclude Include="SelfTestOK.hpp" />
+    <ClInclude Include="Start.hpp" />
+    <ClInclude Include="Stop.hpp" />
+    <ClInclude Include="Suspend.hpp" />
+    <ClInclude Include="Suspended.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

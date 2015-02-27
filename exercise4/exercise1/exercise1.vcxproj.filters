@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Command">
+      <UniqueIdentifier>{0afe6a67-19c6-412e-8bfb-a82192f87dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application">
+      <UniqueIdentifier>{b3dd86e2-b03a-41f2-b71a-b2137958af64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="communication">
+      <UniqueIdentifier>{001dda63-2368-4148-acc0-b14b7591ab3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="abstractOS">
+      <UniqueIdentifier>{d2abf729-6835-4899-9743-3bad50105910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="abstractHW">
+      <UniqueIdentifier>{c1790777-fae8-448e-91d3-e6e01604b0a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{bd5c893c-e72a-4ca4-9554-61a72c024172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\discrete">
+      <UniqueIdentifier>{5eff8fae-21e8-4021-900e-00340836d349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application\continuous">
+      <UniqueIdentifier>{176143d9-73ed-49af-89c0-01e58633af91}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="EmbeddedSystemXState.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="Configuration.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Failure.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Initializing.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Operational.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerOnSelfTest.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Ready.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Suspended.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="exercise1.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="EmbeddedSystemX.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="Mode1.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Mode2.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Mode3.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="RealTimeLoop.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationModeSetting.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="EmbeddedSystemXStateBase.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="SimulateRealTimeState.cpp">
+      <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="RealTimeExecution.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation.cpp">
+      <Filter>application\discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulate.hpp">
+      <Filter>Command</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Command.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Initalized.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Restart.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfTestOK.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Configure.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigurationEnded.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Exit.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Stop.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Start.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Suspend.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Resume.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="SelfTestFailed.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="chMode.h">
+      <Filter>Command</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.hpp">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="EmbeddedSystemXState.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Failure.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Initializing.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Operational.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerOnSelfTest.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Ready.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Suspended.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="EmbeddedSystemX.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode1.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode2.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode3.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="RealTimeLoop.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="ApplicationModeSetting.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="EmbeddedSystemXStateBase.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulateRealTimeState.hpp">
+      <Filter>application</Filter>
+    </ClInclude>
+    <ClInclude Include="RealTimeExecution.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="Simulation.hpp">
+      <Filter>application\discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="RunRealTime.hpp">
+      <Filter>Command</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
