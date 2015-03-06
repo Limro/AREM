@@ -1,23 +1,27 @@
 #include "Mutex.hpp"
 #include "Thread.hpp"
 
-void Mutex::lock()
+namespace abstractOS
 {
-	if (!isOwner)
-	{
-		mutex.lock();
-		isOwner = true;
-		old_priority = Thread::getCurrentThreadPriority();
-		Thread::setCurrentThreadPriority(Thread::ThreadPriority::PRIORITY_HIGH);
-	}
-}
 
-void Mutex::unlock()
-{ 
-	if (isOwner)
+	void Mutex::lock()
 	{
-		mutex.unlock();
-		isOwner = false;
-		Thread::setCurrentThreadPriority(old_priority);
+		if (!isOwner)
+		{
+			mutex.lock();
+			isOwner = true;
+			old_priority = Thread::getCurrentThreadPriority();
+			Thread::setCurrentThreadPriority(Thread::ThreadPriority::PRIORITY_HIGH);
+		}
+	}
+
+	void Mutex::unlock()
+	{
+		if (isOwner)
+		{
+			mutex.unlock();
+			isOwner = false;
+			Thread::setCurrentThreadPriority(old_priority);
+		}
 	}
 }

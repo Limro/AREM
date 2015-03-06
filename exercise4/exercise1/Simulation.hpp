@@ -15,6 +15,9 @@ public:
 	virtual void enter_state(EmbeddedSystemX*) override;
 	virtual void RunRealTime(EmbeddedSystemX*) override;
 
+	virtual std::string get_input() override;
+	virtual void output_result(std::string result) override;
+
 private:
 	Simulation();
 	Simulation(Simulation const&) = delete;

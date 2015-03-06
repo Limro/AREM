@@ -1,11 +1,15 @@
 #include "Conditional.hpp"
 
-void Conditional::wait(Guard& lock)
+namespace abstractOS
 {
-	cv.wait(lock.lock);
-}
 
-void Conditional::notify_all()
-{
-	cv.notify_all();
+	void Conditional::wait(Guard& lock)
+	{
+		cv.wait(lock.lock);
+	}
+
+	void Conditional::notify_all()
+	{
+		cv.notify_all();
+	}
 }

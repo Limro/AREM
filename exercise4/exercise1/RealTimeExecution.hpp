@@ -12,6 +12,9 @@ public:
 
 	virtual void Simulate(EmbeddedSystemX*) override;
 	virtual void enter_state(EmbeddedSystemX*) override;
+
+	virtual std::string get_input() override;
+	virtual void output_result(std::string result) override;
 private:
 	RealTimeExecution();
 	RealTimeExecution(RealTimeExecution const&) = delete;

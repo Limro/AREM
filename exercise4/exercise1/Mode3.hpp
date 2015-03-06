@@ -14,9 +14,10 @@ public:
 
 	void enter_state(EmbeddedSystemX*) override;
 
+	std::string compute(std::string input) override;
+
 	void chMode(EmbeddedSystemX*) override;
 private:
-	void respondM3event();
 
 	Mode3();
 	~Mode3();

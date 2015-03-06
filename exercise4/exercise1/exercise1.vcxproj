@@ -84,7 +84,6 @@
     <ClCompile Include="EmbeddedSystemXStateBase.cpp" />
     <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Mutex.cpp" />
-    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="RealTimeExecution.cpp" />
     <ClCompile Include="Simulate.hpp" />
     <ClCompile Include="SimulateRealTimeState.cpp" />

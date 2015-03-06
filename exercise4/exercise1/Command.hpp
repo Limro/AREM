@@ -1,7 +1,7 @@
 #pragma once
-#include "EmbeddedSystemXState.hpp"
-#include "EmbeddedSystemX.hpp"
-#include "EmbeddedSystemXState.hpp"
+
+class EmbeddedSystemX;
+class EmbeddedSystemXState;
 
 class Command
 {

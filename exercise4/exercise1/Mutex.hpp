@@ -3,19 +3,22 @@
 #include <mutex>
 #include "Thread.hpp"
 
-class Guard;
-
-class Mutex
+namespace abstractOS
 {
-public:
-	void lock();
-	void unlock();
 
-private:
-	friend class Guard;
+	class Guard;
 
-	std::mutex mutex;
-	bool isOwner = false;
-	Thread::ThreadPriority old_priority;
-};
+	class Mutex
+	{
+	public:
+		void lock();
+		void unlock();
 
+	private:
+		friend class Guard;
+
+		std::mutex mutex;
+		bool isOwner = false;
+		Thread::ThreadPriority old_priority;
+	};
+}

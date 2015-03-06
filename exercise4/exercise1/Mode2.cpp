@@ -19,10 +19,9 @@ void Mode2::chMode(EmbeddedSystemX* context)
 void Mode2::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Mode2 entered." << std::endl;
-	//respondM2event();
 }
 
-void Mode2::respondM2event()
+std::string Mode2::compute(std::string input)
 {
-	UI::out() << "respondM2event started..." << std::endl;
+	return "Mode2 result: " + input;
 }

@@ -104,7 +104,6 @@
     <ClCompile Include="Conditional.cpp">
       <Filter>abstractOS</Filter>
     </ClCompile>
-    <ClCompile Include="Queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.hpp">
@@ -220,6 +219,8 @@
     <ClInclude Include="Conditional.hpp">
       <Filter>abstractOS</Filter>
     </ClInclude>
-    <ClInclude Include="Queue.hpp" />
+    <ClInclude Include="Queue.hpp">
+      <Filter>abstractOS</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

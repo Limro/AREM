@@ -4,13 +4,15 @@
 
 #include <condition_variable>
 
-class Conditional
+namespace abstractOS
 {
-public:
-	void wait(Guard& lock);
-	void notify_all();
+	class Conditional
+	{
+	public:
+		void wait(Guard& lock);
+		void notify_all();
 
-private:
-	std::condition_variable cv;
-};
-
+	private:
+		std::condition_variable cv;
+	};
+}

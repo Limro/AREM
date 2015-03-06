@@ -12,6 +12,16 @@ void RealTimeExecution::enter_state(EmbeddedSystemX* context)
 	UI::out() << "RealTimeExecution entered." << std::endl;
 }
 
+std::string get_input()
+{
+	return "REAL INPUT!";
+}
+
+void output_result(std::string result)
+{
+	UI::out() << "REAL RESULT: " << result << std::endl;
+}
+
 RealTimeExecution::RealTimeExecution()
 {
 }
