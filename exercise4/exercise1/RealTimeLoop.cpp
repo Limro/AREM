@@ -45,4 +45,13 @@ void RealTimeLoop::enter_state(EmbeddedSystemX* context)
 	UI::out() << "RealTimeLoop entered." << std::endl;
 	change_appmode_state(context, &Mode1::getInstance());
 	change_sim_state(context, &RealTimeExecution::getInstance());
+	context->get_continuousThread()->rtresume();
+}
+
+void RealTimeLoop::exit_state(EmbeddedSystemX* context)
+{
+	UI::out() << "RealTimeLoop exit." << std::endl;
+	context->get_continuousThread()->rtpause();
+	change_appmode_state(context, nullptr);
+	change_sim_state(context, nullptr);
 }

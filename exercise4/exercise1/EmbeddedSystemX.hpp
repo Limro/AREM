@@ -2,21 +2,30 @@
 
 #include "EmbeddedSystemXStateBase.hpp"
 #include "Command.hpp"
+#include "ContinuousThread.hpp"
+#include "Thread.hpp"
+#include "Queue.hpp"
 
+#include <memory>
 #include <cstdint>
 #include <string>
 
-class EmbeddedSystemX
+class EmbeddedSystemX : public abstractOS::Thread
 {
 public:
 	EmbeddedSystemX(const std::string& name);
 	
-	void HandleEvent(Command* eventCommand);
+	void run() override;
+	void stop();
+
+	void add_command(Command* cmd);
 
 	~EmbeddedSystemX();
 
 	int get_VersionNo();
 	const std::string& get_Name();
+
+	ContinuousThread* get_continuousThread();
 
 	bool get_is_first_run();
 	void set_is_first_run(bool is_first_run);
@@ -31,6 +40,11 @@ private:
 
 	friend class EmbeddedSystemXStateBase;
 
+	void HandleEvent(Command* eventCommand);
+
+	abstractOS::Queue<std::shared_ptr<Command>> commandQueue;
+	bool running;
+
 	void change_state(EmbeddedSystemXState* new_state);
 	void change_sim_state(SimulateRealTimeState* new_state);
 	void change_appmode_state(ApplicationModeSetting* new_state);
@@ -38,6 +52,7 @@ private:
 	SimulateRealTimeState* get_sim_state();
 	ApplicationModeSetting* get_appmode_state();
 
+	ContinuousThread continuousThread;
 	const int VersionNo;
 	const std::string Name;
 	bool is_first_run;

@@ -19,6 +19,7 @@ void Mode3::chMode(EmbeddedSystemX* context)
 void Mode3::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Mode3 entered." << std::endl;
+	context->get_continuousThread()->set_app_mode(this);
 }
 
 std::string Mode3::compute(std::string input)

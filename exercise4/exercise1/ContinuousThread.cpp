@@ -22,12 +22,12 @@ void ContinuousThread::run()
 			abstractOS::Guard rtlock(rtmutex);
 			while (!inRealTimeLoop && running)
 			{
-				if (!running)
-					return;
-
 				rtconditional.wait(rtlock);
 			}
 		}
+
+		if (!running)
+			return;
 
 		{
 			abstractOS::Guard lock(mutex);
@@ -35,7 +35,9 @@ void ContinuousThread::run()
 			auto input = sim_mode->get_input();
 			auto result = app_mode->compute(input);
 			sim_mode->output_result(result);
-		}		
+		}
+
+		Sleep(2000);
 	}
 }
 

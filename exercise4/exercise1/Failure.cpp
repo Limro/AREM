@@ -11,6 +11,11 @@ Failure::~Failure()
 {
 }
 
+void Failure::Exit(EmbeddedSystemX* context)
+{
+	context->stop();
+}
+
 void Failure::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Failure entered." << std::endl;

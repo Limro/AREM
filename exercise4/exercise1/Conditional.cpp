@@ -2,7 +2,6 @@
 
 namespace abstractOS
 {
-
 	void Conditional::wait(Guard& lock)
 	{
 		cv.wait(lock.lock);

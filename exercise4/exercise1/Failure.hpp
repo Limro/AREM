@@ -14,6 +14,7 @@ public:
 
 	void enter_state(EmbeddedSystemX*) override;
 
+	void Exit(EmbeddedSystemX*) override;
 	void Restart(EmbeddedSystemX*) override;
 private:
 	void display(uint32_t errorNo);

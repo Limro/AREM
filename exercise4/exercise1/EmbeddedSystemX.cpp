@@ -7,34 +7,75 @@
 #include "Mode1.hpp"
 
 EmbeddedSystemX::EmbeddedSystemX(const std::string& name)
-	:Name(name), VersionNo(1), is_first_run(true), last_errorNo(0)
+	:Name(name), VersionNo(1), is_first_run(true), last_errorNo(0), 
+	_state(nullptr), _appmode_state(nullptr), _sim_state(nullptr), 
+	commandQueue(5), running(true)
 {
 	change_state(&PowerOnSelfTest::getInstance());
-	change_appmode_state(&Mode1::getInstance());
-	change_sim_state(&RealTimeExecution::getInstance());
+	start();
 }
 
+void EmbeddedSystemX::run()
+{
+	while (running)
+	{
+		auto cmd = commandQueue.get();
+		HandleEvent(cmd.get());
+	}
+}
+
+void EmbeddedSystemX::stop()
+{
+	running = false;
+	continuousThread.stop();
+}
+
+void EmbeddedSystemX::add_command(Command* cmd)
+{
+	std::shared_ptr<Command> ptr(cmd);
+	commandQueue.put(ptr);
+}
 
 EmbeddedSystemX::~EmbeddedSystemX()
 {
 }
 
+ContinuousThread* EmbeddedSystemX::get_continuousThread()
+{
+	return &continuousThread;
+}
+
 void EmbeddedSystemX::change_state(EmbeddedSystemXState* new_state)
 {
+	if (_state != nullptr)
+		_state->exit_state(this);
+
 	_state = new_state;
-	_state->enter_state(this);
+
+	if (_state != nullptr)
+		_state->enter_state(this);
 }
 
 void EmbeddedSystemX::change_sim_state(SimulateRealTimeState* new_state)
 {
+	if (_sim_state != nullptr)
+		_sim_state->exit_state(this);
+
 	_sim_state = new_state;
-	_sim_state->enter_state(this);
+
+	if (_sim_state != nullptr)
+		_sim_state->enter_state(this);
 }
 
 void EmbeddedSystemX::change_appmode_state(ApplicationModeSetting* new_state)
 {
+	if (_appmode_state != nullptr)
+		_appmode_state->exit_state(this);
+
 	_appmode_state = new_state;
-	_appmode_state->enter_state(this);
+
+	if (_appmode_state != nullptr)
+		_appmode_state->enter_state(this);
 }
 
 SimulateRealTimeState* EmbeddedSystemX::get_sim_state()

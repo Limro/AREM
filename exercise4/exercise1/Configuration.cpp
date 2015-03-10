@@ -32,5 +32,4 @@ void Configuration::readConfigurationInfo(EmbeddedSystemX* context)
 
 void Configuration::PerformConfigurationX(EmbeddedSystemX* context)
 {
-	ConfigurationEnded(context);
 }

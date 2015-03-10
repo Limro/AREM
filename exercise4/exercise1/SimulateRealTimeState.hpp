@@ -1,5 +1,6 @@
 #pragma once
 #include "EmbeddedSystemXStateBase.hpp"
+#include <string>
 
 class SimulateRealTimeState : public EmbeddedSystemXStateBase
 {

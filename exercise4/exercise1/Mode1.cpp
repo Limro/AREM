@@ -14,6 +14,7 @@ Mode1::~Mode1()
 void Mode1::enter_state(EmbeddedSystemX* context)
 {
 	UI::out() << "Mode1 entered." << std::endl;
+	context->get_continuousThread()->set_app_mode(this);
 }
 
 std::string Mode1::compute(std::string input)

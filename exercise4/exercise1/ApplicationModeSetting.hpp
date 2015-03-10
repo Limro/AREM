@@ -1,6 +1,7 @@
 #pragma once
 
 #include "EmbeddedSystemXStateBase.hpp"
+#include <string>
 
 class ApplicationModeSetting : public EmbeddedSystemXStateBase
 {

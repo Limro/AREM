@@ -18,6 +18,7 @@ public:
 	void Simulate(EmbeddedSystemX*) override;
 
 	void enter_state(EmbeddedSystemX*) override;
+	void exit_state(EmbeddedSystemX*) override;
 private:
 	RealTimeLoop();
 	~RealTimeLoop() override;

@@ -9,6 +9,7 @@ class EmbeddedSystemXStateBase
 {
 public:
 	virtual void enter_state(EmbeddedSystemX*) = 0; //abstract
+	virtual void exit_state(EmbeddedSystemX*){}
 	virtual ~EmbeddedSystemXStateBase();
 protected:
 	void change_state(EmbeddedSystemX*, EmbeddedSystemXState*);

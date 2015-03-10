@@ -99,10 +99,11 @@
     <ClCompile Include="Mutex.cpp">
       <Filter>abstractOS</Filter>
     </ClCompile>
-    <ClCompile Include="ContinuousThread.cpp" />
-    <ClCompile Include="DiscreteThread.cpp" />
     <ClCompile Include="Conditional.cpp">
       <Filter>abstractOS</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinuousThread.cpp">
+      <Filter>application\continuous</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -214,13 +215,14 @@
     <ClInclude Include="Mutex.hpp">
       <Filter>abstractOS</Filter>
     </ClInclude>
-    <ClInclude Include="ContinuousThread.hpp" />
-    <ClInclude Include="DiscreteThread.hpp" />
     <ClInclude Include="Conditional.hpp">
       <Filter>abstractOS</Filter>
     </ClInclude>
     <ClInclude Include="Queue.hpp">
       <Filter>abstractOS</Filter>
+    </ClInclude>
+    <ClInclude Include="ContinuousThread.hpp">
+      <Filter>application\continuous</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

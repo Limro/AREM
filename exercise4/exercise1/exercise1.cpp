@@ -11,32 +11,59 @@
 #include "Simulate.hpp"
 #include "RunRealTime.hpp"
 
+#include <iostream>
+
 int main(int argc, const char* argv)
 {
-	EmbeddedSystemX system("EmbeddedSystemX");
-	
-	Restart restartcmd;
-	Configure confcmd;
-	Start startcmd;
-	chMode chmodecmd;
-	Suspend suspendcmd;
-	Resume resumecmd;
-	Stop stopcmd;
-	Exit exitcmd;
-	RunRealTime realtimecmd;
-	Simulate simulatecmd;
+	EmbeddedSystemX system("systemX");
 
+	char input = 0;
+	bool running = true;
+	Command* cmd = nullptr;
 
-	system.HandleEvent(&restartcmd);
-	system.HandleEvent(&confcmd);
-	system.HandleEvent(&startcmd);
-	system.HandleEvent(&chmodecmd);
-	system.HandleEvent(&suspendcmd);
-	system.HandleEvent(&resumecmd);
-	system.HandleEvent(&chmodecmd);
-	system.HandleEvent(&chmodecmd);
-	system.HandleEvent(&simulatecmd);
-	system.HandleEvent(&realtimecmd);
-	system.HandleEvent(&stopcmd);
-	system.HandleEvent(&exitcmd);
+	while (running)
+	{
+		std::cin >> input;
+
+		switch (input)
+		{
+		case '1':
+			cmd = new Restart;
+			break;
+		case '2':
+			cmd = new Configure;
+			break;
+		case '3':
+			cmd = new Start;
+			break;
+		case '4':
+			cmd = new chMode;
+			break;
+		case '5':
+			cmd = new Suspend;
+			break;
+		case '6':
+			cmd = new Resume;
+			break;
+		case '7':
+			cmd = new Stop;
+			break;
+		case '8':
+			cmd = new Exit;
+			break;
+		case '9':
+			cmd = new RunRealTime;
+			break;
+		case '0':
+			cmd = new Simulate;
+			break;
+		default:
+			running = false;
+			continue;
+		}
+
+		system.add_command(cmd);
+	}
+
+	system.stop();
 }

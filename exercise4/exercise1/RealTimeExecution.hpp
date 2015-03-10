@@ -1,5 +1,7 @@
 #pragma once
 #include "SimulateRealTimeState.hpp"
+#include <string>
+
 class RealTimeExecution : public SimulateRealTimeState
 {
 public:

@@ -80,7 +80,6 @@
     <ClCompile Include="Conditional.cpp" />
     <ClCompile Include="Configuration.cpp" />
     <ClCompile Include="ContinuousThread.cpp" />
-    <ClCompile Include="DiscreteThread.cpp" />
     <ClCompile Include="EmbeddedSystemXStateBase.cpp" />
     <ClCompile Include="Guard.cpp" />
     <ClCompile Include="Mutex.cpp" />
@@ -113,7 +112,6 @@
     <ClInclude Include="ConfigurationEnded.hpp" />
     <ClInclude Include="Configure.hpp" />
     <ClInclude Include="ContinuousThread.hpp" />
-    <ClInclude Include="DiscreteThread.hpp" />
     <ClInclude Include="EmbeddedSystemXStateBase.hpp" />
     <ClInclude Include="Guard.hpp" />
     <ClInclude Include="Mutex.hpp" />
